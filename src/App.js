@@ -1,18 +1,16 @@
 import React, { useContext } from 'react';
 import PortfolioContext from './context/PortfolioContext';
+import Projects from './components/Projects/index';
 
 function App() {
   const { portfolio } = useContext(PortfolioContext);
+  console.log(`app.js`);
+  console.log(portfolio);
 
   return (
-    <ul>
-      {portfolio.map((project, index) => (
-        <li key={index}>
-          {project.title}
-          <img src={project.screenshot} />
-        </li>
-      ))}
-    </ul>
+    <PortfolioContext.Provider value={portfolio}>
+      <Projects />
+    </PortfolioContext.Provider>
   );
 }
 

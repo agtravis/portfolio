@@ -1,6 +1,6 @@
-import React, { createContext } from 'react';
+import React from 'react';
 
-const PortfolioContext = createContext({
+const PortfolioContext = React.createContext({
   portfolio: [
     {
       title: 'Password Generator',
