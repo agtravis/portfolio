@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
+import { Route, HashRouter as Router, Link } from 'react-router-dom';
 import PortfolioContext from './context/PortfolioContext';
 import ProjectList from './components/ProjectList';
+import About from './components/About';
 
 function App() {
   const { portfolio } = useContext(PortfolioContext);
@@ -8,9 +10,15 @@ function App() {
   console.log(portfolio);
 
   return (
-    <PortfolioContext.Provider value={portfolio}>
-      <ProjectList />
-    </PortfolioContext.Provider>
+    <Router>
+      <h1>Welcome!</h1>
+      <Link to="/projectlist">Portfolio</Link>
+      <Link to="/about">About</Link>
+      <PortfolioContext.Provider value={portfolio}>
+        <Route exact path="/projectlist" component={ProjectList} />
+        <Route exact path="/about" component={About} />
+      </PortfolioContext.Provider>
+    </Router>
   );
 }
 
