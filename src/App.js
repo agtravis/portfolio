@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PortfolioContext from './context/PortfolioContext';
-import Projects from './components/Projects/index';
+import ProjectList from './components/ProjectList';
 
 function App() {
   const { portfolio } = useContext(PortfolioContext);
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <PortfolioContext.Provider value={portfolio}>
-      <Projects />
+      <ProjectList />
     </PortfolioContext.Provider>
   );
 }

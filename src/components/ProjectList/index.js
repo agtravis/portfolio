@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import PortfolioContext from '../../context/PortfolioContext';
 
-function Projects() {
+function ProjectList() {
   const portfolio = useContext(PortfolioContext);
-  console.log(`Projects`);
+  console.log(`ProjectList`);
   console.log(portfolio);
 
   return (
@@ -21,4 +21,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectList;
