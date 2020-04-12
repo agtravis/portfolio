@@ -1,0 +1,23 @@
+.code {
+    font-family: monospace;
+    font-size: 6rem;
+}
+
+#code-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.function-block {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#function {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,21 @@
+nav {
+  background-color: #b2b2b2;
+  border-bottom: 3px solid #ff4040;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  margin-top: -20px;
+}
+
+nav p {
+  margin-top: 0px;
+}
+
+nav p a {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+nav p a:hover {
+  background-color: #3c67ff;
+}
