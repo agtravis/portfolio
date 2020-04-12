@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <h1>Welcome!</h1>
-      <Link to="/projectlist">Portfolio</Link>
+      <Link to="/projectlist">Portfolio</Link> {` no link `}
       <Link to="/about">About</Link>
       <PortfolioContext.Provider value={portfolio}>
         <Route exact path="/projectlist" component={ProjectList} />
