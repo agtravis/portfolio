@@ -8,7 +8,7 @@ function ProjectList() {
 
   return (
     <ul>
-      {portfolio.map((project, index) => (
+      {portfolio.reverse().map((project, index) => (
         <li key={index}>
           {project.title}
           <br />
