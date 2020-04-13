@@ -61,6 +61,10 @@ function ProjectList() {
     <div>
       <ContainerHeader title="My Portfolio" />
       <div id="portfolio-contents">
+        <p>
+          - click the screenshot buttons for more info, and links to deployed
+          apps and repos!
+        </p>
         {portfolio.reverse().map((project, index) => (
           <Project
             key={index}
