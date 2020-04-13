@@ -19,3 +19,44 @@
     position: relative;
     top: 6px;
 }
+
+.input {
+    margin-bottom: -3px;
+}
+
+#username, #email, #message {
+    width: 100%;
+    border: solid 1px #272b4b;
+    border-radius: 5px;
+}
+
+#message {
+    height: 200px;
+}
+
+p#submit {
+    background-color: #272b4b;
+    color: #b2b2b2;
+    width: 250px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 2px solid #073066;
+    border-right: 2px solid #073066;
+    border-top: 2px solid #cbdff8;
+    border-left: 2px solid #cbdff8;
+}
+
+p#submit:hover {
+    background-color: #3c67ff;
+    color: #272b4b;
+}
+
+p#submit:active {
+    border-top: 2px solid #073066;
+    border-left: 2px solid #073066;
+    border-bottom: 2px solid #cbdff8;
+    border-right: 2px solid #cbdff8;
+}
