@@ -7,6 +7,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import NavBar from './components/Navbar';
+import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   const { portfolio } = useContext(PortfolioContext);
@@ -14,12 +16,15 @@ function App() {
   return (
     <PortfolioContext.Provider value={portfolio}>
       <Router>
-        <Header />
-        <NavBar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/projectlist" component={ProjectList} />
-        <Route exact path="/contact" component={Contact} />
+        <div className="react-body">
+          <Header />
+          <NavBar />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/projectlist" component={ProjectList} />
+          <Route exact path="/contact" component={Contact} />
+          <Footer />
+        </div>
       </Router>
     </PortfolioContext.Provider>
   );
