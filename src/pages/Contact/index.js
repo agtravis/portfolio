@@ -4,6 +4,7 @@ import './style.css';
 
 function Contact() {
   const submitContact = () => {
+    // eslint-disable-next-line no-unused-vars
     const contactForm = document.getElementById('contact-form');
     const userName = document.getElementById('username');
     const email = document.getElementById('email');
@@ -47,7 +48,10 @@ function Contact() {
       message.style.border = '1px solid red';
     }
     if (isNamed && isEmailed && isMessaged) {
-      contactForm.submit();
+      alert(
+        `Hello ${userName.value}, sorry I don't have this form fully functional yet! Please copy your message: \n\n${message.value}\n\nthen email me directly at agtravis85@gmail.com, and I'll respond to ${email.value}.\n\nThanks!`
+      );
+      // contactForm.submit();
     }
   };
 
