@@ -9,7 +9,7 @@ function Navbar() {
   };
 
   return (
-    <nav>
+    <nav className="small-screen">
       <p>
         <Link style={linkStyle} to="/about">
           About

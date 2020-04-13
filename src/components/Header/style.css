@@ -4,7 +4,65 @@ header {
 }
 
 h1 {
+  font-family: monospace;
   font-size: 3.75em;
   color: #272b4b;
   font-weight: bolder;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 4rem;
+}
+
+.code-p {
+  font-family: monospace;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  color: #272b4b;
+}
+
+#code-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 180px;
+  position: relative;
+}
+
+.function-block {
+  font-family: monospace;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #272b4b;
+  padding: 3px;
+}
+
+.function-block:hover {
+  background-color: #fff1f1;
+  border-radius: 5px;
+}
+
+#function {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 6px;
+}
+
+@media only screen and (min-width: 600px) {
+  .small-screen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .large-screen {
+    display: none;
+  }
 }

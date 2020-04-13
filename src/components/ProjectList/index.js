@@ -3,8 +3,6 @@ import PortfolioContext from '../../context/PortfolioContext';
 
 function ProjectList() {
   const portfolio = useContext(PortfolioContext);
-  console.log(`ProjectList`);
-  console.log(portfolio);
 
   return (
     <ul>

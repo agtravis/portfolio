@@ -12,10 +12,17 @@ nav p {
 }
 
 nav p a {
+  font-family: monospace;
   padding: 5px;
   border-radius: 5px;
 }
 
 nav p a:hover {
   background-color: #3c67ff;
+}
+
+@media only screen and (min-width: 600px) {
+  .small-screen {
+    display: none;
+  }
 }
