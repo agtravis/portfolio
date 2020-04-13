@@ -49,7 +49,7 @@ function Contact() {
     }
     if (isNamed && isEmailed && isMessaged) {
       alert(
-        `Hello ${userName.value}, sorry I don't have this form fully functional yet! Please copy your message: \n\n${message.value}\n\nthen email me directly at agtravis85@gmail.com, and I'll respond to ${email.value}.\n\nThanks!`
+        `Hello ${userName.value}, sorry, this form is not fully functional yet! Please copy your message: \n\n${message.value}\n\nthen email me directly at agtravis85@gmail.com, and I'll respond to ${email.value}.\n\nThanks!`
       );
       // contactForm.submit();
     }

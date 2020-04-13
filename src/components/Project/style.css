@@ -1,0 +1,147 @@
+#portfolio-list {
+    display: flex;
+    position: absolute;
+    bottom: -50px;
+    background-color: #b2cdf0;
+    padding-bottom: 5px;
+    border: 3px solid #073066;
+    border-radius: 5px;
+}
+
+#portfolio-list a {
+    text-decoration: none;
+    padding: 5px;
+    color: #073066;
+    border-radius: 5px;
+}
+
+#portfolio-list a:hover {
+    background-color: #5e9ef3;
+    color: #fff;
+}
+
+#portfolio-list li {
+    padding: 5px;
+    margin-top: 6px;
+}
+
+.hide {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.opacity {
+    opacity: 15%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#portfolio-contents {
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio-img {
+    width: 100%;
+    border-bottom: 4px solid #073066;
+    border-right: 4px solid #073066;
+    border-top: 4px solid #cbdff8;
+    border-left: 4px solid #cbdff8;
+}
+
+.active {
+    border-top: 4px solid #073066;
+    border-left: 4px solid #073066;
+    border-bottom: 4px solid #cbdff8;
+    border-right: 4px solid #cbdff8;
+}
+
+.portfolio-img:active {
+    border-top: 4px solid #073066;
+    border-left: 4px solid #073066;
+    border-bottom: 4px solid #cbdff8;
+    border-right: 4px solid #cbdff8;
+}
+
+.portfolio-slot {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-container-div {
+    position: absolute;
+    top: 25%;
+    text-align: center;
+}
+
+.portfolio-para {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 10%;
+    cursor: default;
+}
+
+.portfolio-link {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    background-color: #5e9ef3;
+    color: #fff;
+    padding: 5px 10px;
+    border-bottom: 2px solid #073066;
+    border-right: 2px solid #073066;
+    border-top: 2px solid #cbdff8;
+    border-left: 2px solid #cbdff8;
+}
+
+.portfolio-link:hover {
+    background-color: #b2cdf0;
+}
+
+.portfolio-link:active {
+    border-top: 2px solid #073066;
+    border-left: 2px solid #073066;
+    border-bottom: 2px solid #cbdff8;
+    border-right: 2px solid #cbdff8;
+    color: #073066;
+}
+
+/*small screen*/
+
+@media screen and (max-width: 600px) {
+    #main-content-contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .portfolio-slot {
+        margin-bottom: 45px;
+        width: 100%;
+    }
+    #portfolio-contents {
+        flex-direction: column;
+    }
+}
+
+/*fullscreen*/
+
+@media screen and (min-width: 601px) {
+    #main-content {
+        border: 3px solid #073066;
+        border-radius: 10px;
+    }
+    .portfolio-slot {
+        width: 275px;
+        margin: 0 10px 20px;
+    }
+    #portfolio-contents {
+        flex-wrap: wrap;
+    }
+}
