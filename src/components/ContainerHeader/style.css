@@ -1,0 +1,10 @@
+.container-header {
+    border-bottom: 1px solid #272b4b;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-header-title {
+    font-family: monospace;
+    font-weight: bold;
+}
