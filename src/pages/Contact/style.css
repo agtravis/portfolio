@@ -1,0 +1,21 @@
+#contact-links-contact a {
+    font-family: monospace;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #272b4b;
+    padding: 3px;
+}
+
+#contact-links-contact a:hover {
+    background-color: #3c67ff;
+    border-radius: 5px;
+}
+
+#contact-links-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6px;
+}
