@@ -3,9 +3,12 @@ import './style.css';
 
 function ContainerHeader(props) {
   return (
-    <div className="container-header">
-      <h2 className="container-header-title">{props.title}</h2>
-      <div>{props.contactDetails}</div>
+    <div>
+      <div className="container-header">
+        <h3 className="container-header-title">{props.title}</h3>
+        <div>{props.contactDetails}</div>
+      </div>
+      <p>{props.subtitle}</p>
     </div>
   );
 }
