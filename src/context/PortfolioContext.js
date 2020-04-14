@@ -3,6 +3,21 @@ import React from 'react';
 const PortfolioContext = React.createContext({
   portfolio: [
     {
+      title: '++My GitHub Profile',
+      href: 'https://github.com/agtravis',
+      github: 'https://github.com/agtravis',
+      description: 'View my GitHub profile and browse all my repositories',
+      screenshot: 'assets/images/github-profile.png',
+    },
+    {
+      title: '++My Resumé',
+      href:
+        'https://github.com/agtravis/alexander-george-travis-resume/blob/master/alexander-george-travis-resume.pdf',
+      github: 'https://github.com/agtravis/alexander-george-travis-resume',
+      description: 'View my version-controlled and up-to-date resumé',
+      screenshot: 'assets/images/resume.png',
+    },
+    /*{
       title: 'Password Generator',
       href: 'https://agtravis.github.io/homework-week-3/index.html',
       github: 'https://github.com/agtravis/homework-week-3',
@@ -34,7 +49,7 @@ const PortfolioContext = React.createContext({
         'A weather forecast tool with 3rd party API queries & geolocation',
       screenshot: 'assets/images/weather-dashboard.png',
     },
-    {
+    */ {
       title: 'Pocket Bartender',
       href: 'https://agtravis.github.io/pocket-bartender/index.html',
       github: 'https://github.com/agtravis/pocket-bartender',
@@ -42,7 +57,7 @@ const PortfolioContext = React.createContext({
         'Mobile first app with API queries & local storage for inspiration with home cocktailing',
       screenshot: 'assets/images/pocket-bartender.png',
     },
-    {
+    /*{
       title: 'Resume Generator',
       href: 'https://github.com/agtravis/node-resume-generator',
       github: 'https://github.com/agtravis/node-resume-generator',
@@ -50,7 +65,7 @@ const PortfolioContext = React.createContext({
         'CLI to run with Node.JS that uses the GitHub API to generate a PDF resume with theme selection',
       screenshot: 'assets/images/node-resume-generator.png',
     },
-    {
+    */ {
       title: 'Dev-Team Builder',
       href: 'https://github.com/agtravis/employee-summary-team-builder',
       github: 'https://github.com/agtravis/employee-summary-team-builder',
@@ -58,7 +73,7 @@ const PortfolioContext = React.createContext({
         'CLI to run with Node.JS that takes user input to assemble a project team, uses regex validation',
       screenshot: 'assets/images/employee-summary-team-builder.png',
     },
-    {
+    /*{
       title: 'Note Taker',
       href: 'https://agtravis-note-taker.herokuapp.com/',
       github: 'https://github.com/agtravis/note-taker',
@@ -66,7 +81,7 @@ const PortfolioContext = React.createContext({
         'Heroku deployed app written in JavaScript for Node.JS that runs in the browser and stores user input on a server',
       screenshot: 'assets/images/enter-notes.PNG',
     },
-    {
+    */ {
       title: 'Employee Tracker',
       href: 'https://github.com/agtravis/employee-tracker',
       github: 'https://github.com/agtravis/employee-tracker',
@@ -75,7 +90,7 @@ const PortfolioContext = React.createContext({
       screenshot: 'assets/images/employee-tracker.png',
     },
     {
-      title: 'Burger App',
+      title: 'Restaurant Simulator',
       href: 'https://agtravis-burger.herokuapp.com/',
       github: 'https://github.com/agtravis/burger',
       description:
@@ -90,13 +105,29 @@ const PortfolioContext = React.createContext({
         'An online gaming community featuring games, chat, member profiles with high scores. Games written in JS',
       screenshot: 'assets/images/game-chat.png',
     },
-    {
+    /*{
       title: 'Workout Tracker',
       href: 'https://agtravis-workout-tracker.herokuapp.com/',
       github: 'https://github.com/agtravis/workout-tracker',
       description:
         'A graphical interface for users to be able to track their fitness using MongoDB and Mongoose',
       screenshot: 'assets/images/workout-tracker.PNG',
+    },
+    {
+      title: 'Budget Tracker',
+      href: 'https://agtravis-budget-tracker.herokuapp.com/',
+      github: 'https://github.com/agtravis/budget-tracker',
+      description:
+        'A Progressive Web App, installable and functional offline, using IndexDB, a service worker, & manifest',
+      screenshot: 'assets/images/budget-tracker.png',
+    },*/
+    {
+      title: 'Employee Directory',
+      href: 'https://agtravis.github.io/employee-directory/',
+      github: 'https://github.com/agtravis/employee-directory',
+      description:
+        'A simple app using React components, state, props, & context, to organize and filter an API response',
+      screenshot: 'assets/images/employee-directory.png',
     },
   ],
 });

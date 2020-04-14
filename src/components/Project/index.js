@@ -1,13 +1,9 @@
 import React from 'react';
 import './style.css';
 
-function About(props) {
+function Project(props) {
   return (
-    <div
-      className="portfolio-slot"
-      id={`portfolio-slot${props.id}`}
-      onMouseLeave={() => props.toggleOpaqueLeave(`${props.id}`)}
-    >
+    <div className="portfolio-slot" id={`portfolio-slot${props.id}`}>
       <h5 className="portfolio-heading">{props.title}</h5>
       <img
         className="portfolio-img pointer"
@@ -18,7 +14,11 @@ function About(props) {
         onClick={() => props.toggleTransparent(`${props.id}`)}
         onMouseUp={() => props.toggleMouseup(`${props.id}`)}
       />
-      <div id={`container${props.id}`} className="portfolio-container-div hide">
+      <div
+        id={`container${props.id}`}
+        className="portfolio-container-div hide"
+        onMouseLeave={() => props.toggleOpaqueLeave(`${props.id}`)}
+      >
         <p
           className="portfolio-para bold"
           id={`description${props.id}`}
@@ -49,4 +49,4 @@ function About(props) {
   );
 }
 
-export default About;
+export default Project;
