@@ -1,28 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContainerHeader from '../../components/ContainerHeader';
 import './style.css';
 
 function Contact() {
+  const [contactFormContents, setContactFormContents] = useState({
+    nameContents: `name goes here`,
+    emailContents: `email goes here`,
+    messageContents: `message goes here`,
+    mailSent: false,
+    error: null,
+  });
   const submitContact = () => {
     // eslint-disable-next-line no-unused-vars
     const contactForm = document.getElementById('contact-form');
-    const userName = document.getElementById('username');
+    const name = document.getElementById('name');
     const email = document.getElementById('email');
     const message = document.getElementById('message');
     let isNamed;
     let isEmailed;
     let isMessaged;
 
-    userName.style.border = '';
+    name.style.border = '';
     email.style.border = '';
     message.style.border = '';
-    if (userName.value !== '') {
+    if (name.value !== '') {
       isNamed = true;
     } else {
       isNamed = false;
       // alert('Please enter your name');
-      userName.focus();
-      userName.style.border = '1px solid red';
+      name.focus();
+      name.style.border = '1px solid red';
     }
     if (email.value !== '') {
       if (email.value.indexOf('@') !== -1) {
@@ -48,11 +55,28 @@ function Contact() {
       message.style.border = '1px solid red';
     }
     if (isNamed && isEmailed && isMessaged) {
-      alert(
-        `Hello ${userName.value}, sorry, this form is not fully functional yet! Please copy your message: \n\n${message.value}\n\nthen email me directly at agtravis85@gmail.com, and I'll respond to ${email.value}.\n\nThanks!`
-      );
+      // alert(
+      //   `Hello ${contactFormContents.nameContents}, sorry, this form is not fully functional yet! Please copy your message: \n\n${contactFormContents.messageContents}\n\nthen email me directly at agtravis85@gmail.com, and I'll respond to ${contactFormContents.emailContents}.\n\nThanks!`
+      // );
+      console.log(contactFormContents);
       // contactForm.submit();
+      const templateId = 'test';
+      sendFeedback(templateId, contactFormContents);
     }
+  };
+
+  const sendFeedback = (templateId, contactFormContents) => {
+    window.emailjs
+      .send('gmail', templateId, contactFormContents)
+      .then((res) => {
+        console.log(`sent`);
+        console.log(res);
+        setContactFormContents({ ...contactFormContents, mailSent: true });
+      })
+      .catch((error) => {
+        setContactFormContents({ ...contactFormContents, error: error });
+        console.log(error);
+      });
   };
 
   return (
@@ -98,6 +122,8 @@ function Contact() {
       />
       <div id="main-content-contents">
         <form
+          name="contact_form"
+          action="#"
           id="contact-form"
           // onSubmit={(event) => {
           //   // event.preventDefault();
@@ -107,11 +133,18 @@ function Contact() {
           <p className="input">Name</p>
           <input
             type="text"
-            id="username"
-            name="username"
+            id="name"
+            name="name"
             required
             minLength="1"
             maxLength="50"
+            value={contactFormContents.name}
+            onChange={(event) =>
+              setContactFormContents({
+                ...contactFormContents,
+                nameContents: event.target.value,
+              })
+            }
           />
           <p className="input">Email</p>
           <input
@@ -121,13 +154,38 @@ function Contact() {
             required
             minLength="1"
             maxLength="50"
+            value={contactFormContents.email}
+            onChange={(event) =>
+              setContactFormContents({
+                ...contactFormContents,
+                emailContents: event.target.value,
+              })
+            }
           />
           <p className="input">Message</p>
-          <textarea id="message" name="message" required rows="10"></textarea>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows="10"
+            value={contactFormContents.message}
+            onChange={(event) =>
+              setContactFormContents({
+                ...contactFormContents,
+                messageContents: event.target.value,
+              })
+            }
+          ></textarea>
           {/* <input id="submit" type="submit" value="Submit" /> */}
           <p id="submit" onClick={submitContact}>
             Submit
           </p>
+          {contactFormContents.mailSent && (
+            <div>{`Thank you for contacting me!`}</div>
+          )}
+          {!contactFormContents.mailSent && (
+            <div>{contactFormContents.error}</div>
+          )}
         </form>
       </div>
     </div>
