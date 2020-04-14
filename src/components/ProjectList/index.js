@@ -7,53 +7,67 @@ function ProjectList() {
   const portfolio = useContext(PortfolioContext);
 
   const toggleTransparent = (project) => {
-    if (!project.parentElement.children[1].classList.contains('opacity')) {
-      project.parentElement.children[1].classList.add('opacity');
-      project.parentElement.children[1].classList.remove('pointer');
-      project.parentElement.children[2].classList.remove('hide');
+    if (
+      !document
+        .getElementById(`portfolio-image${project}`)
+        .classList.contains('opacity')
+    ) {
+      document
+        .getElementById(`portfolio-image${project}`)
+        .classList.add('opacity');
+      document
+        .getElementById(`portfolio-image${project}`)
+        .classList.remove('pointer');
+      document.getElementById(`container${project}`).classList.remove('hide');
     } else {
-      project.parentElement.children[1].classList.remove('opacity');
-      project.parentElement.children[1].classList.add('pointer');
-      project.parentElement.children[2].classList.add('hide');
+      document
+        .getElementById(`portfolio-image${project}`)
+        .classList.remove('opacity');
+      document
+        .getElementById(`portfolio-image${project}`)
+        .classList.add('pointer');
+      document.getElementById(`container${project}`).classList.add('hide');
     }
   };
 
   const toggleOpaqueLeave = (project) => {
-    document.getElementById(project).children[1].classList.remove('opacity');
-    document.getElementById(project).children[1].classList.add('pointer');
-    document.getElementById(project).children[2].classList.add('hide');
+    document
+      .getElementById(`portfolio-image${project}`)
+      .classList.remove('opacity');
+    document
+      .getElementById(`portfolio-image${project}`)
+      .classList.add('pointer');
+    document.getElementById(`container${project}`).classList.add('hide');
   };
 
   const toggleMousedown = (project) => {
+    document.getElementById(`container${project}`).classList.add('hide');
     document
-      .getElementById(project)
-      .parentElement.parentElement.children[2].classList.add('hide');
+      .getElementById(`portfolio-image${project}`)
+      .classList.remove('opacity');
     document
-      .getElementById(project)
-      .parentElement.parentElement.children[1].classList.remove('opacity');
+      .getElementById(`portfolio-image${project}`)
+      .classList.add('pointer');
     document
-      .getElementById(project)
-      .parentElement.parentElement.children[1].classList.add('pointer');
-    document
-      .getElementById(project)
-      .parentElement.parentElement.children[1].classList.add('active');
+      .getElementById(`portfolio-image${project}`)
+      .classList.add('active');
   };
 
   const toggleMouseup = (project) => {
     if (
       !document
-        .getElementById(project)
-        .parentElement.children[1].classList.contains('opacity')
+        .getElementById(`portfolio-image${project}`)
+        .classList.contains('opacity')
     ) {
       document
-        .getElementById(project)
-        .parentElement.children[1].classList.remove('active');
+        .getElementById(`portfolio-image${project}`)
+        .classList.remove('active');
       document
-        .getElementById(project)
-        .parentElement.children[1].classList.remove('opacity');
+        .getElementById(`portfolio-image${project}`)
+        .classList.remove('opacity');
       document
-        .getElementById(project)
-        .parentElement.children[1].classList.add('pointer');
+        .getElementById(`portfolio-image${project}`)
+        .classList.add('pointer');
     }
   };
 

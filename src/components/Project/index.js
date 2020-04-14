@@ -6,7 +6,7 @@ function About(props) {
     <div
       className="portfolio-slot"
       id={`portfolio-slot${props.id}`}
-      onMouseLeave={() => props.toggleOpaqueLeave(`portfolio-slot${props.id}`)}
+      onMouseLeave={() => props.toggleOpaqueLeave(`${props.id}`)}
     >
       <h5 className="portfolio-heading">{props.title}</h5>
       <img
@@ -15,14 +15,14 @@ function About(props) {
         alt={props.title}
         id={`portfolio-image${props.id}`}
         src={props.screenshot}
-        onClick={(event) => props.toggleTransparent(event.target)}
-        onMouseUp={() => props.toggleMouseup(`portfolio-image${props.id}`)}
+        onClick={() => props.toggleTransparent(`${props.id}`)}
+        onMouseUp={() => props.toggleMouseup(`${props.id}`)}
       />
       <div id={`container${props.id}`} className="portfolio-container-div hide">
         <p
           className="portfolio-para bold"
           id={`description${props.id}`}
-          onMouseDown={() => props.toggleMousedown(`description${props.id}`)}
+          onMouseDown={() => props.toggleMousedown(`${props.id}`)}
         >
           {props.description}
         </p>
