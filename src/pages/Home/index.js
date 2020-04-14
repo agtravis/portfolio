@@ -7,10 +7,13 @@ function Home() {
   return (
     <div>
       <ContainerHeader title="Welcome to my portfolio!" />
-      <h4 className="subtitle">Click the links below to learn about me</h4>
       <p
         className="code"
-        style={{ marginRight: '2em', textAlign: 'right' }}
+        style={{
+          marginRight: '2em',
+          textAlign: 'right',
+          marginBottom: '0',
+        }}
       >{`{`}</p>
       <div id="function">
         <Link to="/about">
@@ -29,7 +32,10 @@ function Home() {
           </p>
         </Link>
       </div>
-      <p className="code" style={{ marginLeft: '2em' }}>{`}`}</p>
+      <p
+        className="code"
+        style={{ marginLeft: '2em', marginTop: '0' }}
+      >{`}`}</p>
     </div>
   );
 }
