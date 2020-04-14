@@ -79,21 +79,24 @@ function ProjectList() {
           apps and repos!"
       />
       <div id="portfolio-contents">
-        {portfolio.reverse().map((project, index) => (
-          <Project
-            key={index}
-            id={index}
-            title={project.title}
-            href={project.href}
-            github={project.github}
-            description={project.description}
-            screenshot={project.screenshot}
-            toggleTransparent={toggleTransparent}
-            toggleOpaqueLeave={toggleOpaqueLeave}
-            toggleMousedown={toggleMousedown}
-            toggleMouseup={toggleMouseup}
-          />
-        ))}
+        {portfolio
+          .filter((project) => project.position > 0)
+          .sort((a, b) => a.position - b.position)
+          .map((project, index) => (
+            <Project
+              key={index}
+              id={index}
+              title={project.title}
+              href={project.href}
+              github={project.github}
+              description={project.description}
+              screenshot={project.screenshot}
+              toggleTransparent={toggleTransparent}
+              toggleOpaqueLeave={toggleOpaqueLeave}
+              toggleMousedown={toggleMousedown}
+              toggleMouseup={toggleMouseup}
+            />
+          ))}
       </div>
     </div>
   );
