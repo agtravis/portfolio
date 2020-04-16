@@ -11,8 +11,6 @@ function Contact() {
     error: null,
   });
   const submitContact = () => {
-    // eslint-disable-next-line no-unused-vars
-    const contactForm = document.getElementById('contact-form');
     const name = document.getElementById('name');
     const email = document.getElementById('email');
     const message = document.getElementById('message');
@@ -27,7 +25,6 @@ function Contact() {
       isNamed = true;
     } else {
       isNamed = false;
-      // alert('Please enter your name');
       name.focus();
       name.style.border = '1px solid red';
     }
@@ -36,13 +33,11 @@ function Contact() {
         isEmailed = true;
       } else {
         isEmailed = false;
-        // alert('Please make sure you enter a valid email address');
         email.focus();
         email.style.border = '1px solid red';
       }
     } else {
       isEmailed = false;
-      // alert('Please enter your email');
       email.focus();
       email.style.border = '1px solid red';
     }
@@ -50,16 +45,10 @@ function Contact() {
       isMessaged = true;
     } else {
       isMessaged = false;
-      // alert('Please enter a message');
       message.focus();
       message.style.border = '1px solid red';
     }
     if (isNamed && isEmailed && isMessaged) {
-      // alert(
-      //   `Hello ${contactFormContents.nameContents}, sorry, this form is not fully functional yet! Please copy your message: \n\n${contactFormContents.messageContents}\n\nthen email me directly at agtravis85@gmail.com, and I'll respond to ${contactFormContents.emailContents}.\n\nThanks!`
-      // );
-      console.log(contactFormContents);
-      // contactForm.submit();
       const templateId = 'test';
       sendFeedback(templateId, contactFormContents);
     }
@@ -69,13 +58,11 @@ function Contact() {
     window.emailjs
       .send('gmail', templateId, contactFormContents)
       .then((res) => {
-        console.log(`sent`);
-        console.log(res);
         setContactFormContents({ ...contactFormContents, mailSent: true });
       })
       .catch((error) => {
         setContactFormContents({ ...contactFormContents, error: error });
-        console.log(error);
+        console.error(error);
       });
   };
 
@@ -121,15 +108,7 @@ function Contact() {
         }
       />
       <div id="main-content-contents">
-        <form
-          name="contact_form"
-          action="#"
-          id="contact-form"
-          // onSubmit={(event) => {
-          //   // event.preventDefault();
-          //   submitContact();
-          // }}
-        >
+        <form name="contact_form" action="#" id="contact-form">
           <p className="input">Name</p>
           <input
             type="text"
@@ -176,7 +155,6 @@ function Contact() {
               })
             }
           ></textarea>
-          {/* <input id="submit" type="submit" value="Submit" /> */}
           <p id="submit" onClick={submitContact}>
             Submit
           </p>

@@ -7,12 +7,7 @@ function About() {
     <div>
       <ContainerHeader title="A little about myself..." />
       <div id="main-content-contents">
-        <img
-          id="profile-pic"
-          src="assets/images/me1.jpg"
-          alt="myself"
-          // title="toggle profile-pic"
-        />
+        <img id="profile-pic" src="assets/images/me1.jpg" alt="myself" />
 
         <article id="about-me">
           <p>
