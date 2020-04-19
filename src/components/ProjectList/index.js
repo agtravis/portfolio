@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import PortfolioContext from '../../context/PortfolioContext';
 import ContainerHeader from '../../components/ContainerHeader';
 import Project from '../Project';
+import './style.css';
 
 function ProjectList() {
   const portfolio = useContext(PortfolioContext);

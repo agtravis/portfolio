@@ -33,13 +33,14 @@
     font-weight: bold;
 }
 
+/* 
 .opacity {
     opacity: 15%;
 }
 
 .pointer {
     cursor: pointer;
-}
+} */
 
 #portfolio-contents {
     display: flex;
