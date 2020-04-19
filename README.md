@@ -1,6 +1,6 @@
 # George Travis Portfolio
 
-The purpose of this page is to bring the personality part of the tripod of digital resources utilized in attempting to secure an interview, the other two parts being GitHub (technical) and a single page résumé (standard).
+The purpose of this page is to bring the personality part of the tripod of digital resources utilized in attempting to secure an interview, the other two parts being GitHub (technical) and a single page résumé (standard). (For a user's convenience, those two parts of the tripod are linked in the portfolio page, as well as in the footer, and the contact page).
 
 However, it is more than just that. Listed below are some cool things utilized in the creation and operation of my portfolio:
 
