@@ -28,13 +28,13 @@ function Header() {
           <p className="code">{`{`}</p>
           <div id="function">
             <Link to="/about">
-              <p className="function-block">About Me</p>
+              <p className="function-block header-links">About Me</p>
             </Link>
             <Link to="projectlist">
-              <p className="function-block">My Portfolio</p>
+              <p className="function-block header-links">My Portfolio</p>
             </Link>
             <Link to="contact">
-              <p className="function-block">Contact Me</p>
+              <p className="function-block header-links">Contact Me</p>
             </Link>
           </div>
           <p className="code">{`}`}</p>

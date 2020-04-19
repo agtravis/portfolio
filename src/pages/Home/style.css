@@ -1,3 +1,8 @@
 .subtitle {
-    font-family: monospace;
+  font-family: monospace;
+}
+
+.main-link:hover {
+  background-color: #3c67ff;
+  border-radius: 5px;
 }
