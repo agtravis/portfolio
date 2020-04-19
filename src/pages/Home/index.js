@@ -6,7 +6,10 @@ import ContainerHeader from '../../components/ContainerHeader';
 function Home() {
   return (
     <div>
-      <ContainerHeader title="Welcome to my portfolio!" />
+      <ContainerHeader
+        title="Welcome to my portfolio!"
+        subtitle={`React & JSX, JavaScript, SQL & Sequelize, Node.JS, Express, Handlebars, MongoDB, Mongoose...`}
+      />
       <p
         className="code"
         style={{
