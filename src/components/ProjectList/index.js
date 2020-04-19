@@ -16,6 +16,8 @@ function ProjectList() {
       document
         .getElementById(`portfolio-image${project}`)
         .classList.add('opacity');
+      document.getElementById(`portfolio-image${project}`).style.opacity =
+        '15%';
       document
         .getElementById(`portfolio-image${project}`)
         .classList.remove('pointer');
@@ -24,6 +26,9 @@ function ProjectList() {
       document
         .getElementById(`portfolio-image${project}`)
         .classList.remove('opacity');
+
+      document.getElementById(`portfolio-image${project}`).style.opacity =
+        '100%';
       document
         .getElementById(`portfolio-image${project}`)
         .classList.add('pointer');
@@ -35,6 +40,7 @@ function ProjectList() {
     document
       .getElementById(`portfolio-image${project}`)
       .classList.remove('opacity');
+    document.getElementById(`portfolio-image${project}`).style.opacity = '100%';
     document
       .getElementById(`portfolio-image${project}`)
       .classList.add('pointer');
@@ -46,6 +52,7 @@ function ProjectList() {
     document
       .getElementById(`portfolio-image${project}`)
       .classList.remove('opacity');
+    document.getElementById(`portfolio-image${project}`).style.opacity = '100%';
     document
       .getElementById(`portfolio-image${project}`)
       .classList.add('pointer');
@@ -66,6 +73,8 @@ function ProjectList() {
       document
         .getElementById(`portfolio-image${project}`)
         .classList.remove('opacity');
+      document.getElementById(`portfolio-image${project}`).style.opacity =
+        '100%';
       document
         .getElementById(`portfolio-image${project}`)
         .classList.add('pointer');
