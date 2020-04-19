@@ -8,7 +8,7 @@ function Home() {
     <div>
       <ContainerHeader
         title="Welcome to my portfolio!"
-        subtitle={`React & JSX, JavaScript, SQL & Sequelize, Node.JS, Express, Handlebars, MongoDB, Mongoose...`}
+        subtitle={`My comfort zones: React & JSX, Tacos, JavaScript, Cats, MSSQL/MySQL & Sequelize, Sci-Fi, Node.JS, Cartoons, Express, History, Handlebars, Retro Video Games, MongoDB & Mongoose...`}
       />
       <p
         className="code"
