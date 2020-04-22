@@ -9,6 +9,7 @@ function ContainerHeader(props) {
         <div>{props.contactDetails}</div>
       </div>
       <p>{props.subtitle}</p>
+      {props.instructions ? <p>{props.instructions}</p> : null}
     </div>
   );
 }

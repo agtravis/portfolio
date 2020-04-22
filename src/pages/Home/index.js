@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import ContainerHeader from '../../components/ContainerHeader';
+import SkillsContext from '../../context/SkillsContext';
 
 function Home() {
+  const { HTML } = useContext(SkillsContext);
   return (
     <div>
-      <ContainerHeader
-        title="Welcome to my portfolio!"
-        subtitle={`My comfort zones: React & JSX, Tacos, JavaScript, Cats, MSSQL/MySQL & Sequelize, Sci-Fi, Node.JS, Cartoons, Express, History, Handlebars, Retro Video Games, MongoDB & Mongoose...`}
-      />
+      <ContainerHeader title="Welcome to my portfolio!" subtitle={HTML} />
       <p
         className="code"
         style={{

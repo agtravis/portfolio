@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ContainerHeader from '../../components/ContainerHeader';
+import SkillsContext from '../../context/SkillsContext';
 import './style.css';
 
 function About() {
+  const { HTML } = useContext(SkillsContext);
   return (
     <div>
-      <ContainerHeader title="A little about myself..." />
+      <ContainerHeader title="A little about myself..." subtitle={HTML} />
       <div id="main-content-contents">
         <img id="profile-pic" src="assets/images/me1.jpg" alt="myself" />
 

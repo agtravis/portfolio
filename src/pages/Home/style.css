@@ -6,3 +6,7 @@
   background-color: #3c67ff;
   border-radius: 5px;
 }
+
+.emphasize {
+  font-weight: bolder;
+}

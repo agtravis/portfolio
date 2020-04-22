@@ -67,6 +67,8 @@ function Project(props) {
 }
 ```
 
+I also use `useContext` for a paragraph of HTML I want to reuse in different components. This has its own context since it is a different type of information than the other context data.
+
 ## Responsive
 
 My site is a mobile first design, and responds to view screen size in multiple ways. The main way is my custom NavBar relocation done by measuring the screen width and then hiding or displaying certain elements. Also I have other various responsive features such as the amount of columns that display in my portfolio page.

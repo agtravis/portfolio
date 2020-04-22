@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import PortfolioContext from '../../context/PortfolioContext';
+import SkillsContext from '../../context/SkillsContext';
 import ContainerHeader from '../../components/ContainerHeader';
 import Project from '../Project';
 import './style.css';
 
 function ProjectList() {
   const portfolio = useContext(PortfolioContext);
-
+  const { HTML } = useContext(SkillsContext);
   const toggleTransparent = (project) => {
     if (
       !document
@@ -85,7 +86,8 @@ function ProjectList() {
     <div>
       <ContainerHeader
         title="My Portfolio"
-        subtitle="- click the screenshot buttons for more info, and links to deployed
+        subtitle={HTML}
+        instructions="- click the screenshot buttons for more info, and links to deployed
           apps and repos!"
       />
       <div id="portfolio-contents">
