@@ -80,7 +80,7 @@ const PortfolioContext = React.createContext({
       description:
         'CLI to run with Node.JS that takes user input to assemble a project team, uses regex validation',
       screenshot: 'assets/images/employee-summary-team-builder.png',
-      position: 6,
+      position: 0,
     },
     {
       title: 'Note Taker',
@@ -98,7 +98,7 @@ const PortfolioContext = React.createContext({
       description:
         'CLI running in Node.JS that navigates a SQL DB where a user can manage a team of employees, CRUD features',
       screenshot: 'assets/images/employee-tracker.png',
-      position: 5,
+      position: 6,
     },
     {
       title: 'Restaurant Simulator',
@@ -107,7 +107,7 @@ const PortfolioContext = React.createContext({
       description:
         'An app that runs in the browser via Heroku and utilizing SQL and CRUD operations to create a fun UI',
       screenshot: 'assets/images/burger-app.png',
-      position: 4,
+      position: 5,
     },
     {
       title: 'Rinqydink Arcade',
@@ -143,6 +143,15 @@ const PortfolioContext = React.createContext({
       description:
         'A simple app using React components, state, props, & context, to organize and filter an API response',
       screenshot: 'assets/images/employee-directory.png',
+      position: 4,
+    },
+    {
+      title: 'Bookshelf App',
+      href: 'https://agtravis-google-books.herokuapp.com/',
+      github: 'https://github.com/agtravis/google-books',
+      description:
+        'Full MERN stack app that offers information on searched books, and allows a user to save favorites in a database',
+      screenshot: 'assets/images/google-books.png',
       position: 3,
     },
   ],
