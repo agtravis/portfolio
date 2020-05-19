@@ -26,24 +26,38 @@ function Project(props) {
         >
           {props.description}
         </p>
-        <a
-          href={props.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="portfolio-link"
-          id={`deployed-app${props.id}`}
-        >
-          Deployed App
-        </a>
-        <a
-          href={props.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="portfolio-link"
-          id={`github${props.id}`}
-        >
-          GitHub Repo
-        </a>
+        {props.href !== props.github ? (
+          <>
+            <a
+              href={props.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-link"
+              id={`deployed-app${props.id}`}
+            >
+              Deployed App
+            </a>
+            <a
+              href={props.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="portfolio-link"
+              id={`github${props.id}`}
+            >
+              GitHub Repo
+            </a>
+          </>
+        ) : (
+          <a
+            href={props.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="portfolio-link"
+            id={`github${props.id}`}
+          >
+            GitHub Repo
+          </a>
+        )}
       </div>
     </div>
   );
