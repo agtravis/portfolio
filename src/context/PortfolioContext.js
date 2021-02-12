@@ -62,7 +62,7 @@ const PortfolioContext = React.createContext({
       description:
         'Mobile first app with API queries & local storage for inspiration with home cocktailing',
       screenshot: 'assets/images/pocket-bartender.png',
-      position: 3,
+      position: 4,
     },
     {
       title: 'Resume Generator',
@@ -107,7 +107,7 @@ const PortfolioContext = React.createContext({
       description:
         'An app that runs in the browser via Heroku and utilizing SQL and CRUD operations to create a fun UI',
       screenshot: 'assets/images/burger-app.png',
-      position: 6,
+      position: 0,
     },
     {
       title: 'Rinqydink Arcade',
@@ -116,7 +116,7 @@ const PortfolioContext = React.createContext({
       description:
         'An online gaming community featuring games, chat, member profiles with high scores. Games written in JS',
       screenshot: 'assets/images/game-chat.png',
-      position: 2,
+      position: 3,
     },
     {
       title: 'Workout Tracker',
@@ -143,7 +143,7 @@ const PortfolioContext = React.createContext({
       description:
         'A simple app using React components, state, props, & context, to organize and filter an API response',
       screenshot: 'assets/images/employee-directory.png',
-      position: 5,
+      position: 6,
     },
     {
       title: 'Bookshelf App',
@@ -152,7 +152,7 @@ const PortfolioContext = React.createContext({
       description:
         'Full MERN stack app that offers information on searched books, and allows a user to save favorites in a database',
       screenshot: 'assets/images/google-books.png',
-      position: 4,
+      position: 5,
     },
     {
       title: 'Book-It-Yourself',
@@ -161,6 +161,15 @@ const PortfolioContext = React.createContext({
       description:
         'Responsive MERN stack app with offline functionality & user account password encryption connecting DIY musician communities',
       screenshot: 'assets/images/book-it-yourself.png',
+      position: 2,
+    },
+    {
+      title: 'Superhero Battle',
+      href: 'https://agtravis-superhero-battle.herokuapp.com/',
+      github: 'https://github.com/agtravis/superhero-battle',
+      description:
+        'Collectable Card Game - Responsive MERN stack app with offline functionality & user account password encryption, CSS Animation',
+      screenshot: 'assets/images/superhero-battle.png',
       position: 1,
     },
   ],
